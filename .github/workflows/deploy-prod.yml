@@ -12,7 +12,7 @@ jobs:
       - name: cURL request
         id: curl_request
         run: |
-          response=$(curl --write-out "%{http_code}" --silent --output /dev/null --location --request POST 'https://release-ee.appsmith.com/api/v1/git/deploy/app/65efea6c03f50648ed054d7a?branchName=master' --header 'Authorization: Bearer bf73a96870d018f4e1e4fc5325c50ff7f90fb0f59a7d70148c80d387e475663889ddf014e615a2dddc422d199e024f5db18841771959ec925f0622c4ef31ad0facf38c7b699dec5d3ebfb557b2997e492568ccdb98381f27976cf94c0a561f69cf7d738fffad258ca626bdc2964ca1f612220661878a371cdecb20ef04d5bb84d75b6c6ed5a0e00e7dd24f84f40af7fb4f0a7758645ead9bee0fa082bdd094e867bb145a93fd38bb72bca7a54b1af51d0860bce657a3a8bb8fca8bf0fe9ee86bdde0baef8f754a2270aa6ed02a344e9ffd9ad75945da61303d8f6af8d300cc75')
+          response=$(curl --write-out "%{http_code}" --silent --output /dev/null --location --request POST 'https://ee-3732.dp.appsmith.com/api/v1/git/deploy/app/65f190241eb7377abba05521?branchName=prod' --header 'Authorization: Bearer ac9bb3949140fc75bbec6227f1cab3ae0ca8b0efe89fd4eacd72983b26b2cc3133955bab56b76abed45a06626869e0c700f924ee7db11c5588c7f528de39585d5cc076b81a20fff1b1ca3969ce44f2a0e8001ccd62d1b841dd282e67e16ea32374dc5d3e79532965665ff08142232d4b3e6c0b161a61a0fee00c78eaeb12dd7e830996eb3b5fcb46bdfed2d1cff72fe86e453bb2353428415a43ce767a22fd91c221abb57731a0c3126a502c616286ba4a91a452ebd7bfb264960ef6748dd7ca7244989d560326c023895a505998dc7732fc5c37282e4e11379d50f9ce135fd1')
 
           echo "Response status: $response"
           echo "response=$response" >> $GITHUB_ENV
