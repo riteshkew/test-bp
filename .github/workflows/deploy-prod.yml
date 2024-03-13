@@ -1,14 +1,14 @@
 name: Deploy Master
 
-on:
-  push:
-    branches:
-      - prod
+# on:
+#   push:
+#     branches:
+#       - prod
 
-jobs:
-  curl-call:
-    runs-on: ubuntu-latest
-    steps:
-      - name: cURL request
-        run: |
-          curl --location --request POST https://release-ee.appsmith.com/api/v1/git/deploy/app/65efea6c03f50648ed054d7a?branchName=master --header 'Authorization: Bearer bf73a96870d018f4e1e4fc5325c50ff7f90fb0f59a7d70148c80d387e475663889ddf014e615a2dddc422d199e024f5db18841771959ec925f0622c4ef31ad0facf38c7b699dec5d3ebfb557b2997e492568ccdb98381f27976cf94c0a561f69cf7d738fffad258ca626bdc2964ca1f612220661878a371cdecb20ef04d5bb84d75b6c6ed5a0e00e7dd24f84f40af7fb4f0a7758645ead9bee0fa082bdd094e867bb145a93fd38bb72bca7a54b1af51d0860bce657a3a8bb8fca8bf0fe9ee86bdde0baef8f754a2270aa6ed02a344e9ffd9ad75945da61303d8f6af8d300cc75'
+# jobs:
+#   curl-call:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: cURL request
+#         run: |
+#           curl --location --request POST https://release-ee.appsmith.com/api/v1/git/deploy/app/65efea6c03f50648ed054d7a?branchName=master --header 'Authorization: Bearer bf73a96870d018f4e1e4fc5325c50ff7f90fb0f59a7d70148c80d387e475663889ddf014e615a2dddc422d199e024f5db18841771959ec925f0622c4ef31ad0facf38c7b699dec5d3ebfb557b2997e492568ccdb98381f27976cf94c0a561f69cf7d738fffad258ca626bdc2964ca1f612220661878a371cdecb20ef04d5bb84d75b6c6ed5a0e00e7dd24f84f40af7fb4f0a7758645ead9bee0fa082bdd094e867bb145a93fd38bb72bca7a54b1af51d0860bce657a3a8bb8fca8bf0fe9ee86bdde0baef8f754a2270aa6ed02a344e9ffd9ad75945da61303d8f6af8d300cc75'
